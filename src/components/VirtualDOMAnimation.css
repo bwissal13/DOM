@@ -1,0 +1,89 @@
+.virtual-dom-animation {
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.animation-controls {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.step-indicator {
+  display: flex;
+  gap: 10px;
+}
+
+.step-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ddd;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.step-dot.active {
+  background: #007bff;
+  transform: scale(1.2);
+}
+
+.animation-stage {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin: 20px 0;
+}
+
+.dom-container, .vdom-container {
+  padding: 20px;
+  border-radius: 8px;
+  background: #f8f9fa;
+}
+
+.dom-node, .vdom-node {
+  padding: 15px;
+  border: 2px solid #007bff;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.highlight {
+  background: #fff3cd;
+  padding: 2px 6px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.diff-active {
+  border-color: #28a745;
+}
+
+.diff {
+  background: #d4edda;
+}
+
+.updating {
+  animation: update-pulse 1s infinite;
+}
+
+@keyframes update-pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+.step-explanation {
+  margin-top: 20px;
+  padding: 15px;
+  background: #e8f4ff;
+  border-radius: 6px;
+}
+
+.step-explanation h4 {
+  color: #007bff;
+  margin-bottom: 10px;
+} 
